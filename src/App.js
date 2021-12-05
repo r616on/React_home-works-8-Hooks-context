@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="App">
       <FirstTask />
-      {/* <span>Раздел Компонентов</span>
-      <SecondTask /> */}
+      <SecondTask />
     </div>
   );
 }
