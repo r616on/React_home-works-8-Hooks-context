@@ -3,7 +3,7 @@ import "./desktop.scss";
 import { ActiveI } from "../FirstTask";
 
 const Details = (props) => {
-  const [data, setData] = useState(false);
+  const [data, setData] = useState({});
   const [active] = useContext(ActiveI);
   const [id, setId] = useState();
 
@@ -21,6 +21,7 @@ const Details = (props) => {
           setData(respData);
           setId(data.id);
         } catch (e) {
+          console.error(e);
         } finally {
         }
       };
@@ -32,7 +33,7 @@ const Details = (props) => {
   }, [active]);
 
   const { avatar, name, details } = data;
-
+  console.log(data);
   const Image = ({ avatar }) => {
     return <img src={avatar} className="img " alt="img"></img>;
   };

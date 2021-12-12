@@ -21,7 +21,10 @@ const List = (props) => {
         setData(respData);
         setLoading(false);
       } catch (e) {
+        console.error(e);
+        setData([{ id: 1, name: "Произошла ошибка" }]);
       } finally {
+        setLoading(false);
       }
     };
     fetchData();
